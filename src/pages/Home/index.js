@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
 
+// Components
+import Header from '../../components/Header';
+
 class Home extends Component {
   constructor() {
     super();
     this.state = {
-      name: 'Hello World',
+      user: {
+        name: 'Caio',
+        thumb: './images/user.jpg',
+      },
     };
   }
 
   render() {
-    const { name } = this.state;
+    const { user } = this.state;
 
     return (
-      <h1>{name}</h1>
+      <div className="container">
+        <Header user={user} />
+      </div>
     );
   }
 }
