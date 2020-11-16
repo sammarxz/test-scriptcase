@@ -4,6 +4,9 @@ import React, { Component } from 'react';
 import Header from '../../components/Header';
 import Aside from '../../components/Aside';
 
+// Styles
+import { Content, Title } from './styles';
+
 class Home extends Component {
   constructor() {
     super();
@@ -22,6 +25,11 @@ class Home extends Component {
       <div className="container">
         <Header user={user} />
         <Aside />
+        <Content className="d--grid grid-layout">
+          <div className="ga--1-2">
+            <Title className="fw--light">Edição de Projeto</Title>
+          </div>
+        </Content>
       </div>
     );
   }

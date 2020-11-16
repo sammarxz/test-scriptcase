@@ -12,12 +12,12 @@ import {
 } from './styles';
 
 const Header = ({ user: { name, thumb } }) => (
-  <H className="d--grid ai--center jc--space-between">
+  <H className="d--grid ai--center jc--space-between grid-layout">
     <Logo to="/">
       <img src="./images/logo.svg" alt="ScriptCase Logo" />
     </Logo>
-    <Search className="hidden--mb" />
-    <div className="d--flex ai--center jc--flex-end">
+    <Search className="hidden--mb ga--1-2" />
+    <div className="d--flex ai--center jc--flex-end ga--1-4">
       <Version className="d--flex ai--center hidden--mb">
         <FiFolder size="1.2em" className="d--inline-block c--primary mr--small" />
         <p className="d--inline-block">samples 1.0.0</p>

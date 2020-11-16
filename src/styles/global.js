@@ -72,8 +72,32 @@ const GlobalStyle = createGlobalStyle`
     padding: 3% 5%;
   }
 
+  .grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (min-width: 750px) {
+      grid-template-columns: 1.3fr 2fr 1fr 3fr auto;
+    }
+  }
+
+  .ga--1-2 {
+    grid-area: 1 / 2;
+  }
+
+  .ga--1-3 {
+    grid-area: 1 / 3;
+  }
+
+  .ga--1-4 {
+    grid-area: 1 / 4;
+  }
+
   .fw--bold {
     font-weight: 600;
+  }
+
+  .fw--light {
+    font-weight: 300;
   }
 
   .avatar {

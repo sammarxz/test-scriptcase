@@ -5,20 +5,11 @@ export const Header = styled.header`
   position: fixed;
   left: 5%;
   right: 5%;
-  grid-template-columns: repeat(2, 1fr);
-
-  @media (min-width: 750px) {
-    grid-template-columns: 1fr 1fr 3fr auto;
-  }
 
   .divisor {
     margin: 0 16px;
     height: 38px;
     width: 2px;
-  }
-
-  .info {
-    grid-area: 1 / 4;
   }
 `;
 
