@@ -61,10 +61,19 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  a {
+    color: currentColor;
+    text-decoration: none;
+  }
+
   .container {
     max-width: 1420px;
     margin: 0 auto;
     padding: 3% 5%;
+  }
+
+  .fw--bold {
+    font-weight: 600;
   }
 
   .avatar {
@@ -75,6 +84,10 @@ const GlobalStyle = createGlobalStyle`
 
   .c--primary {
     color: var(--primary-color);
+  }
+
+  .c--low-contrast {
+    color: var(--low-contrast-color);
   }
 
   .bg--component-outline {

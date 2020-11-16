@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 // Components
 import Header from '../../components/Header';
+import Aside from '../../components/Aside';
 
 class Home extends Component {
   constructor() {
@@ -20,6 +21,7 @@ class Home extends Component {
     return (
       <div className="container">
         <Header user={user} />
+        <Aside />
       </div>
     );
   }

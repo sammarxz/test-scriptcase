@@ -15,14 +15,13 @@ const Search = ({ onSearch, className }) => {
   };
 
   return (
-    <SearchWrapper>
+    <SearchWrapper className={className || ''}>
       <SearchBar
         type="text"
         value={value}
         onChange={(e) => setValue(e.target.value)}
         onKeyDown={handleSubmit}
         placeholder="Buscar..."
-        className={className || ''}
       />
       <SearchIcon>
         <FiSearch />
