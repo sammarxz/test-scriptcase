@@ -27,26 +27,17 @@ class Home extends Component {
         <Header user={user} />
         <Aside />
         <Content className="d--grid grid-layout">
-          <div className="ga--1-2">
-            <Title className="fw--light">Edição de Projeto</Title>
+          <div className="ga--1-2-span-3">
+            <Title className="fw--light mb--medium">Edição de Projeto</Title>
             <Tabs>
-              <Tabs.Tab label="Tab 1">
+              <Tabs.Tab label="Informações">
                 <p>Content 1</p>
               </Tabs.Tab>
-
-              <Tabs.Tab label="Tab 2">
-                <ul>
-                  <li>List</li>
-                  <li>Content</li>
-                  <li>2</li>
-                </ul>
+              <Tabs.Tab label="Localizações">
+                <h2>Conteúdo de Localizações</h2>
               </Tabs.Tab>
-
-              <Tabs.Tab label="Tab 3">
-                <figure>
-                  <img src="http://placehold.it/200" alt="Content 3" />
-                  <figcaption>Image Content 3</figcaption>
-                </figure>
+              <Tabs.Tab label="Temas">
+                <h2>Conteúdo de Temas</h2>
               </Tabs.Tab>
             </Tabs>
           </div>

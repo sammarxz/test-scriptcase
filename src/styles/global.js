@@ -55,10 +55,26 @@ const GlobalStyle = createGlobalStyle`
     color: var(--low-contrast-color);
   }
 
-  input {
+  input,
+  button {
     &:focus {
       outline: none;
     }
+  }
+
+  button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    -webkit-appearance: none;
   }
 
   a {
@@ -90,6 +106,10 @@ const GlobalStyle = createGlobalStyle`
 
   .ga--1-4 {
     grid-area: 1 / 4;
+  }
+
+  .ga--1-2-span-3 {
+    grid-area: 1 / 2 / span 1 / span 3;
   }
 
   .fw--bold {
@@ -156,6 +176,18 @@ const GlobalStyle = createGlobalStyle`
 
   .mr--normal {
     margin-right: 16px;
+  }
+
+  .mb--small {
+    margin-bottom? 8px;
+  }
+
+  .mb--normal {
+    margin-bottom: 16px;
+  }
+
+  .mb--medium {
+    margin-bottom: 32px;
   }
 
   .hidden--mb {

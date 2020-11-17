@@ -1,7 +1,11 @@
 import React, { Component, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 
+// Components
 import Tab from '../Tab';
+
+// Styles
+import { Tab as T, TabList, TabContent } from './styles';
 
 class Tabs extends Component {
   constructor(props) {
@@ -60,17 +64,16 @@ class Tabs extends Component {
 
   render() {
     const { className } = this.props;
-    // const cssClass = cx('tabs', className);
 
     return (
-      <section className={className}>
-        <ul className="tabs__list">
+      <T className={className || ''}>
+        <TabList>
           {this.renderChildrenTabs()}
-        </ul>
-        <div className="tabs__content">
+        </TabList>
+        <TabContent>
           {this.renderActiveTabContent()}
-        </div>
-      </section>
+        </TabContent>
+      </T>
     );
   }
 }

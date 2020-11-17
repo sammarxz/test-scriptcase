@@ -1,18 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Styles
+import { TabItem, TabLink } from './styles';
+
 const Tab = ({
   className, label, isActive, onClick,
 }) => (
-  <li className={className}>
-    <button
+  <TabItem className={className}>
+    <TabLink
       type="button"
       className={isActive ? 'is--active' : ''}
       onClick={onClick}
     >
       {label}
-    </button>
-  </li>
+    </TabLink>
+  </TabItem>
 );
 
 Tab.propTypes = {
