@@ -32,9 +32,8 @@ const Search = ({ onSearch, className }) => {
 };
 
 Search.defaultProps = {
-  onSearch: (value) => {
-    alert(`Buscando por ${value}`);
-  },
+  onSearch: (value) => value, // console.log(`Buscando por ${value}`);
+
   className: '',
 };
 Search.propTypes = {

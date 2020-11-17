@@ -166,6 +166,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     &.btn__ghost {
+      border-color: var(--low-contrast-color);
       background-color: transparent;
       color: var(--low-contrast-color);
     }

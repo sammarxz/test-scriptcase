@@ -53,8 +53,6 @@ class Tabs extends Component {
     const { children } = this.props;
     const { activeIndex } = this.state;
 
-    console.log(Array.isArray(children));
-
     if (children[activeIndex]) {
       return children[activeIndex].props.children;
     }

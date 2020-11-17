@@ -106,9 +106,6 @@ class Home extends Component {
                             placeholder="Alguma coisa"
                             label="Nome do Projeto"
                             value={name}
-                            events={{
-                              onChange: (data) => console.log(data),
-                            }}
                           />
                         </div>
                         <div className="col-6">
@@ -118,9 +115,6 @@ class Home extends Component {
                             placeholder="Menu"
                             label="Aplicação Inicial"
                             value={initialApplication}
-                            events={{
-                              onChange: (data) => console.log(data),
-                            }}
                           />
                         </div>
                       </div>
@@ -132,9 +126,6 @@ class Home extends Component {
                             placeholder="Projeto de teste para meu cliente"
                             label="Descrição do Projeto"
                             value={description}
-                            events={{
-                              onChange: (data) => console.log(data),
-                            }}
                           />
                         </div>
                       </div>
