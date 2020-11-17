@@ -17,9 +17,16 @@ export const DropContainer = styled.div.attrs({
   border-radius: 8px;
   cursor: pointer;
   transition: height .3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   ${(props) => props.isDragActive && dragActive};
   ${(props) => props.isDragReject && dragReject};
+
+  svg {
+    color: var(--low-contrast-color);
+  }
 `;
 
 const messageColors = {
@@ -29,6 +36,8 @@ const messageColors = {
 };
 
 export const UploadMessage = styled.p`
+  font-size: 1.2rem;
   width: 100%;
+  font-weight: bold;
   color: ${(props) => messageColors[props.type || 'default']};
 `;

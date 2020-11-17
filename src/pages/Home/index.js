@@ -56,14 +56,21 @@ class Home extends Component {
             <Title className="fw--light mb--normal">Edição de Projeto</Title>
             <Tabs>
               <Tabs.Tab label="Informações">
-                <form>
-                  {uploadedFiles.length === 0 && (
-                    <ImageUpload onUpload={this.handleUpload} />
-                  )}
-                  {!!uploadedFiles.length && (
-                    <ProjectImage files={uploadedFiles} />
-                  )}
-                </form>
+                <div className="row">
+                  <div className="col-6">
+                    {uploadedFiles.length === 0 && (
+                      <ImageUpload onUpload={this.handleUpload} />
+                    )}
+                    {!!uploadedFiles.length && (
+                      <ProjectImage files={uploadedFiles} />
+                    )}
+                  </div>
+                  <div className="col-6">
+                    <form>
+                      <input type="text" />
+                    </form>
+                  </div>
+                </div>
               </Tabs.Tab>
               <Tabs.Tab label="Localizações">
                 <h3>Conteúdo de Localizações</h3>

@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Dropzone from 'react-dropzone';
+import { FiUpload } from 'react-icons/fi';
 
 import { DropContainer, UploadMessage } from './styles';
 
@@ -29,7 +30,12 @@ const ImageUpload = ({ onUpload }) => {
           isDragReject={isDragReject}
           className="d--flex ai--center jc--center ta--center"
         >
+          <FiUpload size="5rem" className="mb--normal" />
           {renderDragMessage(isDragActive, isDragReject)}
+          <button type="button" className="mt--normal btn btn--low-contrast">
+            Escolher Imagem
+          </button>
+          <span className="mt--small fs--small">Tamanho máximo de 5Mb</span>
           <input {...getInputProps()} />
         </DropContainer>
       )}
