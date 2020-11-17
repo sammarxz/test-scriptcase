@@ -22,6 +22,7 @@ const Search = ({ onSearch, className }) => {
         onChange={(e) => setValue(e.target.value)}
         onKeyDown={handleSubmit}
         placeholder="Buscar..."
+        className="search"
       />
       <SearchIcon>
         <FiSearch />

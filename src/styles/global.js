@@ -88,6 +88,35 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
+  input:not(.search):not(.checkbox),
+  textarea {
+    appearance: none;
+    background: #fff;
+    background-image: none;
+    border: .05rem solid var(--low-contrast-color);
+    border-radius: 8px;
+    color: var(--high-contrast-color);
+    display: block;
+    font-size: 1rem;
+    height: 48px;
+    line-height: 1.2rem;
+    max-width: 100%;
+    outline: 0;
+    padding: 8px;
+    position: relative;
+    transition: background .2s,border .2s,box-shadow .2s,color .2s;
+    width: 100%;
+
+    &:focus {
+      border-color: var(--primary-color);
+    }
+  }
+
+  textarea {
+    font: inherit;
+    height: 120px;
+  }
+
   .container {
     max-width: 1420px;
     margin: 0 auto;
@@ -241,14 +270,6 @@ const GlobalStyle = createGlobalStyle`
     float: left;
     margin: 8px 2%;
     min-height: 2px;
-  }
-
-  .row [class^="col"]:first-child {
-    margin-left: 0;
-  }
-
-  .row [class^="col"]:last-child {
-    margin-right: 0;
   }
   
   .col-1,

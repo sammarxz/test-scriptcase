@@ -8,6 +8,8 @@ import Aside from '../../components/Aside';
 import Tabs from '../../components/Tabs';
 import ImageUpload from '../../components/ImageUpload';
 import ProjectImage from '../../components/ProjectImage';
+import Form from '../../components/Form';
+import TextInput from '../../components/TextInput';
 
 // Styles
 import { Content, Title } from './styles';
@@ -21,6 +23,12 @@ class Home extends Component {
         thumb: './images/user.jpg',
       },
       uploadedFiles: [],
+      project: {
+        name: 'Projeto Exemplo',
+        initialApplication: 'Menu',
+        description: 'Lorem Ipsum Dolor sit amet...',
+        showFavicon: true,
+      },
     };
   }
 
@@ -45,7 +53,16 @@ class Home extends Component {
   };
 
   render() {
-    const { user, uploadedFiles } = this.state;
+    const {
+      user,
+      uploadedFiles,
+      project: {
+        name,
+        description,
+        // showFavicon,
+        initialApplication,
+      },
+    } = this.state;
 
     return (
       <div className="container">
@@ -66,9 +83,63 @@ class Home extends Component {
                     )}
                   </div>
                   <div className="col-6">
-                    <form>
-                      <input type="text" />
-                    </form>
+                    <Form>
+                      <div className="row">
+                        <div className="col-6">
+                          <TextInput
+                            type="text"
+                            id="name"
+                            placeholder="Alguma coisa"
+                            label="Nome do Projeto"
+                            value={name}
+                            events={{
+                              onChange: (data) => console.log(data),
+                            }}
+                          />
+                        </div>
+                        <div className="col-6">
+                          <TextInput
+                            type="text"
+                            id="initialApplication"
+                            placeholder="Menu"
+                            label="Aplicação Inicial"
+                            value={initialApplication}
+                            events={{
+                              onChange: (data) => console.log(data),
+                            }}
+                          />
+                        </div>
+                      </div>
+                      <div className="row">
+                        <div className="col-12">
+                          <TextInput
+                            type="textarea"
+                            id="description"
+                            placeholder="Projeto de teste para meu cliente"
+                            label="Descrição do Projeto"
+                            value={description}
+                            events={{
+                              onChange: (data) => console.log(data),
+                            }}
+                          />
+                        </div>
+                      </div>
+                      <div className="row">
+                        <div className="col-12">
+                          <label htmlFor="favicon">
+                            <input type="checkbox" id="favicon" className="checkbox" />
+                            Exibir ícone na aba do Navegador (Favicon)
+                          </label>
+                          <div className="row">
+                            <div className="col-6" />
+                            <div className="col-6">
+                              <button type="button">Cancelar</button>
+                              <button type="button">Concluir</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </Form>
                   </div>
                 </div>
               </Tabs.Tab>
