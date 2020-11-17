@@ -29,6 +29,7 @@ class Home extends Component {
         description: 'Lorem Ipsum Dolor sit amet...',
         showFavicon: true,
       },
+      menuOpen: false,
     };
   }
 
@@ -58,6 +59,12 @@ class Home extends Component {
     });
   };
 
+  handleOpenMenu = () => {
+    this.setState((prevState) => ({
+      menuOpen: !prevState.menuOpen,
+    }));
+  };
+
   render() {
     const {
       user,
@@ -68,12 +75,13 @@ class Home extends Component {
         // showFavicon,
         initialApplication,
       },
+      menuOpen,
     } = this.state;
 
     return (
       <div className="container">
-        <Header user={user} />
-        <Aside />
+        <Header user={user} openMenu={this.handleOpenMenu} />
+        <Aside menuOpen={menuOpen} openMenu={this.handleOpenMenu} />
         <Content className="d--grid grid-layout">
           <div className="ga--1-2-span-3">
             <Title className="fw--light mb--normal">Edição de Projeto</Title>

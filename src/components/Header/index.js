@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FaChevronDown } from 'react-icons/fa';
 import { FiFolder, FiBell } from 'react-icons/fi';
+import { MdMenu } from 'react-icons/md';
 
 // Components
 import Search from '../Search';
@@ -11,8 +12,11 @@ import {
   Header as H, Logo, Version, Notification, User,
 } from './styles';
 
-const Header = ({ user: { name, thumb } }) => (
+const Header = ({ user: { name, thumb }, openMenu }) => (
   <H className="d--grid ai--center jc--space-between grid-layout">
+    <button type="button" className="hidden--dsk" onClick={openMenu}>
+      <MdMenu size={24} />
+    </button>
     <Logo to="/">
       <img src="./images/logo.svg" alt="ScriptCase Logo" />
     </Logo>
@@ -42,6 +46,7 @@ const Header = ({ user: { name, thumb } }) => (
 
 Header.propTypes = {
   user: PropTypes.objectOf(PropTypes.string).isRequired,
+  openMenu: PropTypes.func.isRequired,
 };
 
 export default Header;

@@ -1,12 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import {
   FiHome, FiDatabase, FiPackage, FiLayout, FiSettings, FiHelpCircle,
 } from 'react-icons/fi';
+import { MdClose } from 'react-icons/md';
 
 import { Nav, NavList, NavItem } from './styles';
 
-const Aside = () => {
+const Aside = ({ menuOpen, openMenu }) => {
   const size = '1.4em';
 
   const navLinks = [
@@ -45,7 +47,10 @@ const Aside = () => {
   ];
 
   return (
-    <Nav>
+    <Nav className={menuOpen ? 'is--active' : ''}>
+      <button type="button" onClick={openMenu}>
+        <MdClose size={24} color="#fff" className="hidden--dsk mb--normal" />
+      </button>
       <NavList>
         {navLinks.map(({
           path, name, icon, active, isFinal,
@@ -62,6 +67,15 @@ const Aside = () => {
       </NavList>
     </Nav>
   );
+};
+
+Aside.defaultProps = {
+  menuOpen: false,
+};
+
+Aside.propTypes = {
+  menuOpen: PropTypes.bool,
+  openMenu: PropTypes.func.isRequired,
 };
 
 export default Aside;

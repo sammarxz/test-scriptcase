@@ -7,8 +7,12 @@ export const Header = styled.header`
   left: 5%;
   right: 5%;
   top: 0;
-  height: 120px;
+  height: 80px;
   z-index: 999;
+
+  @media (min-width: 750px) {
+    height: 120px;
+  }
 
   .divisor {
     margin: 0 16px;

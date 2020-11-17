@@ -323,6 +323,14 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  .hidden--dsk {
+    display: block;
+
+    @media (min-width: 750px) {
+      display: none;
+    }
+  }
+
   .row {
     position: relative;
     width: 100%;
