@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FiTrash2 } from 'react-icons/fi';
 // import { CircularProgressbar } from 'react-circular-progressbar';
 // import { MdCheckCircle, MdError, MdLink } from 'react-icons/md';
 
 // Styles
 import { Container, FileInfo, Preview } from './styles';
 
-const ProjectImage = ({ files }) => (
+const ProjectImage = ({ files, onDelete }) => (
   <Container className="br--normal">
     {files.map(({
       preview, name, readableSize,
@@ -19,7 +20,8 @@ const ProjectImage = ({ files }) => (
             <span className="fs--small">
               {readableSize}
             </span>
-            <button type="button" onClick={() => {}} className="btn btn--error mt--normal">
+            <button type="button" onClick={onDelete} className="btn btn__error mt--normal">
+              <FiTrash2 />
               Excluir
             </button>
           </div>
@@ -54,6 +56,7 @@ const ProjectImage = ({ files }) => (
 
 ProjectImage.propTypes = {
   files: PropTypes.arrayOf(PropTypes.object).isRequired,
+  onDelete: PropTypes.func.isRequired,
 };
 
 export default ProjectImage;

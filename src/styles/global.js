@@ -94,7 +94,7 @@ const GlobalStyle = createGlobalStyle`
     background: #fff;
     background-image: none;
     border: .05rem solid var(--low-contrast-color);
-    border-radius: 8px;
+    border-radius: 4px;
     color: var(--high-contrast-color);
     display: block;
     font-size: 1rem;
@@ -115,6 +115,60 @@ const GlobalStyle = createGlobalStyle`
   textarea {
     font: inherit;
     height: 120px;
+  }
+
+  .btn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: .05rem solid var(--low-contrast-color);
+    border-radius: 4px;
+    color: var(--low-contrast-color);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    outline: 0;
+    padding: 8px 16px;
+    height: 48px;
+    text-align: center;
+    text-decoration: none;
+    transition: background .2s,border .2s,box-shadow .2s,color .2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    &.btn__primary {
+      border-color: var(--primary-color);
+      background-color: var(--primary-color);
+      color: #fff;
+    }
+
+    &.btn__success {
+      border-color: var(--success-color);
+      background-color: var(--success-color);
+      color: #fff;
+    }
+
+    &.btn__error {
+      border-color: var(--error-color);
+      background-color: var(--error-color);
+      color: #fff;
+    }
+
+    &.btn__low-contrast {
+      border-color: var(--low-contrast-color);
+      background-color: var(--low-contrast-color);
+      color: #fff;
+    }
+
+    &.btn__ghost {
+      background-color: transparent;
+      color: var(--low-contrast-color);
+    }
   }
 
   .container {
@@ -205,6 +259,10 @@ const GlobalStyle = createGlobalStyle`
     align-items: center;
   }
 
+  .jc--end {
+    justify-content: flex-end;
+  }
+
   .jc--space-between {
     justify-content: space-between;
   }
@@ -251,6 +309,10 @@ const GlobalStyle = createGlobalStyle`
 
   .br--normal {
     border-radius: 8px;
+  }
+
+  .w--100 {
+    width: 100%;
   }
 
   .hidden--mb {

@@ -52,6 +52,12 @@ class Home extends Component {
     // Send to API
   };
 
+  handleDelete = () => {
+    this.setState({
+      uploadedFiles: [],
+    });
+  };
+
   render() {
     const {
       user,
@@ -79,7 +85,7 @@ class Home extends Component {
                       <ImageUpload onUpload={this.handleUpload} />
                     )}
                     {!!uploadedFiles.length && (
-                      <ProjectImage files={uploadedFiles} />
+                      <ProjectImage files={uploadedFiles} onDelete={this.handleDelete} />
                     )}
                   </div>
                   <div className="col-6">
@@ -124,19 +130,20 @@ class Home extends Component {
                           />
                         </div>
                       </div>
-                      <div className="row">
+                      <div className="row mb--small">
                         <div className="col-12">
                           <label htmlFor="favicon">
                             <input type="checkbox" id="favicon" className="checkbox" />
                             Exibir ícone na aba do Navegador (Favicon)
                           </label>
-                          <div className="row">
-                            <div className="col-6" />
-                            <div className="col-6">
-                              <button type="button">Cancelar</button>
-                              <button type="button">Concluir</button>
-                            </div>
-                          </div>
+                        </div>
+                      </div>
+                      <div className="row">
+                        <div className="col-6">
+                          <button type="button" className="btn btn__ghost mr--small w--100">Cancelar</button>
+                        </div>
+                        <div className="col-6">
+                          <button type="button" className="btn btn__primary w--100">Concluir</button>
                         </div>
                       </div>
                     </Form>

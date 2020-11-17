@@ -11,7 +11,7 @@ const dragReject = css`
 export const DropContainer = styled.div.attrs({
   className: 'dropzone',
 })`
-  min-height: 300px;
+  min-height: 360px;
   background-color: var(--component-bg-color);
   border: 2px dashed var(--low-contrast-color);
   border-radius: 8px;

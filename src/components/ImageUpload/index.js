@@ -32,7 +32,7 @@ const ImageUpload = ({ onUpload }) => {
         >
           <FiUpload size="5rem" className="mb--normal" />
           {renderDragMessage(isDragActive, isDragReject)}
-          <button type="button" className="mt--normal btn btn--low-contrast">
+          <button type="button" className="mt--normal btn btn__low-contrast">
             Escolher Imagem
           </button>
           <span className="mt--small fs--small">Tamanho máximo de 5Mb</span>
