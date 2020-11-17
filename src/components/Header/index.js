@@ -28,7 +28,7 @@ const Header = ({ user: { name, thumb } }) => (
       </Notification>
       <div className="bg--component-outline divisor" />
       <User className="d--flex ai--center">
-        <p className="mr--normal">
+        <p className="mr--normal hidden--mb">
           Olá,
           {' '}
           <strong>{name}</strong>

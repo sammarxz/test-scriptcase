@@ -15,7 +15,7 @@ class Tabs extends Component {
     };
   }
 
-  handleTabClick = (tabIndex) => {
+  handleTabClick(tabIndex) {
     const { activeIndex } = this.state;
     const { onClick } = this.props;
 

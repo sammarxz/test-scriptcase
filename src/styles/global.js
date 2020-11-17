@@ -36,11 +36,15 @@ const GlobalStyle = createGlobalStyle`
     --primary-color: #0F5EF7;
     --component-outline-color: #F3F3FF;
     --component-bg-color: #F3F3FF;
+    --success-color: #00DD32;
+    --error-color: #F14747;
   }
 
   body {
     color: var(--high-contrast-color);
     font-family: Inter, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
   }
 
   ::-webkit-input-placeholder { /* Edge */
@@ -89,7 +93,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .grid-layout {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: none;
 
     @media (min-width: 750px) {
       grid-template-columns: 1.3fr 2fr 1fr 3fr auto;

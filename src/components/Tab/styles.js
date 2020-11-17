@@ -11,7 +11,6 @@ export const TabLink = styled.button`
   display: inline-block;
   text-align: center;
   padding: 8px;
-  margin-right: 16px;
   transition: all .3s ease;
 
   &.is--active {

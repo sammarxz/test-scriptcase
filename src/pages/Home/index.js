@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import Header from '../../components/Header';
 import Aside from '../../components/Aside';
 import Tabs from '../../components/Tabs';
+import ImageUpload from '../../components/ImageUpload';
 
 // Styles
 import { Content, Title } from './styles';
@@ -31,13 +32,15 @@ class Home extends Component {
             <Title className="fw--light mb--medium">Edição de Projeto</Title>
             <Tabs>
               <Tabs.Tab label="Informações">
-                <p>Content 1</p>
+                <form>
+                  <ImageUpload />
+                </form>
               </Tabs.Tab>
               <Tabs.Tab label="Localizações">
-                <h2>Conteúdo de Localizações</h2>
+                <h3>Conteúdo de Localizações</h3>
               </Tabs.Tab>
               <Tabs.Tab label="Temas">
-                <h2>Conteúdo de Temas</h2>
+                <h3>Conteúdo de Temas</h3>
               </Tabs.Tab>
             </Tabs>
           </div>
