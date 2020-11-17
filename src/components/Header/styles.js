@@ -17,7 +17,7 @@ export const Header = styled.header`
   .divisor {
     margin: 0 16px;
     height: 38px;
-    width: 2px;
+    width: 1px;
   }
 `;
 

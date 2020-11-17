@@ -36,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
     --medium-contrast-color: #566976;
     --low-contrast-color: #7D92A1;
     --primary-color: #0F5EF7;
-    --component-outline-color: #F3F3FF;
+    --component-outline-color: #DAE2E8;
     --component-bg-color: #F3F3FF;
     --success-color: #00DD32;
     --error-color: #F14747;
@@ -93,7 +93,7 @@ const GlobalStyle = createGlobalStyle`
     appearance: none;
     background: #fff;
     background-image: none;
-    border: .05rem solid var(--low-contrast-color);
+    border: .05rem solid var(--component-outline-color);
     border-radius: 4px;
     color: var(--high-contrast-color);
     display: block;
