@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
+import 'react-circular-progressbar/dist/styles.css';
+
 const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
@@ -124,6 +126,14 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 300;
   }
 
+  .fs--small {
+    font-size: .8rem;
+  }
+
+  .ta--center {
+    text-align: center;
+  }
+
   .avatar {
     width: 36px;
     height: 36px;
@@ -174,6 +184,10 @@ const GlobalStyle = createGlobalStyle`
     justify-content: flex-end;
   }
 
+  .fd--column {
+    flex-direction: column;
+  }
+
   .mr--small {
     margin-right: 8px;
   }
@@ -192,6 +206,22 @@ const GlobalStyle = createGlobalStyle`
 
   .mb--medium {
     margin-bottom: 32px;
+  }
+
+  .mt--small {
+    margin-top: 8px;
+  }
+
+  .mt--normal {
+    margin-top: 16px;
+  }
+
+  .mt--medium {
+    margin-top: 32px;
+  }
+
+  .br--normal {
+    border-radius: 8px;
   }
 
   .hidden--mb {
